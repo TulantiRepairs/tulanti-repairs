@@ -83,10 +83,12 @@
     .social-icons a img {
       width: 80px;
       cursor: pointer;
-      transition: filter 0.3s, transform 0.2s, box-shadow 0.3s;
       border-radius: 12px;
       vertical-align: middle;
-      filter: grayscale(100%);
+
+      /* Filtro per invertire i colori e ottenere blu con dettagli bianchi */
+      filter: invert(28%) sepia(97%) saturate(713%) hue-rotate(175deg) brightness(93%) contrast(90%);
+      transition: filter 0.3s, transform 0.2s, box-shadow 0.3s;
     }
 
     .social-icons a:hover {
