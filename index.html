@@ -29,12 +29,21 @@
       color: #002855;
     }
 
+    /* Container verticale per WA, testo e social */
+    .social-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px; /* spazio tra elementi */
+      max-width: 320px; /* limita larghezza */
+      margin: 0 auto 40px auto;
+    }
+
     .whatsapp-container {
-      display: inline-block;
-      margin-bottom: 20px;
       border-bottom: 3px solid white;
       padding-bottom: 6px;
       transition: border-color 0.3s;
+      width: fit-content;
     }
 
     .whatsapp-container a img {
@@ -59,8 +68,7 @@
       color: #002855;
       font-weight: 700;
       font-size: 18px;
-      margin-top: 15px;
-      margin-bottom: 40px;
+      margin: 0; /* togli margini per controllo */
     }
 
     .social-icons {
@@ -98,6 +106,11 @@
     }
 
     @media (max-width: 500px) {
+      .social-wrapper {
+        max-width: 100%;
+        gap: 20px;
+      }
+
       .social-icons {
         gap: 20px;
       }
@@ -113,7 +126,6 @@
 
       .whatsapp-text {
         font-size: 16px;
-        margin-bottom: 30px;
       }
     }
   </style>
@@ -128,25 +140,31 @@
     Prenota Ora!
   </div>
 
-  <div class="whatsapp-container">
-    <a href="https://wa.me/393456145470" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-      <img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="WhatsApp">
-    </a>
+  <!-- Wrapper che contiene WA, testo e social -->
+  <div class="social-wrapper">
+
+    <div class="whatsapp-container">
+      <a href="https://wa.me/393456145470" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="WhatsApp">
+      </a>
+    </div>
+
     <div class="whatsapp-text">
       Clicca il tuo social preferito per saperne di più!
     </div>
-  </div>
 
-  <div class="social-icons">
-    <a href="https://www.tiktok.com/@tulantirepairs" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-      <img src="https://img.icons8.com/fluency/96/002855/tiktok.png" alt="TikTok">
-    </a>
-    <a href="https://www.instagram.com/tulanti_repairs" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-      <img src="https://img.icons8.com/fluency/96/002855/instagram-new.png" alt="Instagram">
-    </a>
-    <a href="https://www.facebook.com/tulantirepairs" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-      <img src="https://img.icons8.com/fluency/96/002855/facebook-new.png" alt="Facebook">
-    </a>
+    <div class="social-icons">
+      <a href="https://www.tiktok.com/@tulantirepairs" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <img src="https://img.icons8.com/fluency/96/002855/tiktok.png" alt="TikTok">
+      </a>
+      <a href="https://www.instagram.com/tulanti_repairs" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="https://img.icons8.com/fluency/96/002855/instagram-new.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/tulantirepairs" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="https://img.icons8.com/fluency/96/002855/facebook-new.png" alt="Facebook">
+      </a>
+    </div>
+
   </div>
 
 </body>
