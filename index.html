@@ -8,9 +8,10 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background: #001f3f; /* Sfondo blu scuro */
+      background: #ffffff; /* Sfondo bianco pulito */
       margin: 0;
       padding: 20px;
+      color: #002855; /* Blu scuro testo */
     }
 
     .header-image img {
@@ -20,22 +21,38 @@
       margin-bottom: 20px;
     }
 
-    .intro-text {
+    .main-text {
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 40px;
+      color: #002855; /* Blu scuro testo */
+    }
+
+    .whatsapp-container {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .whatsapp-text {
+      color: #002855; /* Blu scuro testo */
       font-weight: bold;
       font-size: 18px;
-      margin-bottom: 30px;
-      color: white; /* Testo bianco */
+      margin-top: 15px;
+      margin-bottom: 40px;
     }
 
     .social-icons img {
       width: 80px;
       margin: 15px;
       cursor: pointer;
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.3s;
+      border-radius: 12px; /* leggero arrotondamento per stile moderno */
     }
 
-    .social-icons img:hover {
+    .social-icons img:hover,
+    .whatsapp-container a img:hover {
       transform: scale(1.1);
+      box-shadow: 0 0 8px 3px #00aaff; /* effetto luce azzurro */
     }
 
     @media (max-width: 500px) {
@@ -44,8 +61,13 @@
         margin: 10px;
       }
 
-      .intro-text {
+      .main-text {
+        font-size: 18px;
+      }
+
+      .whatsapp-text {
         font-size: 16px;
+        margin-bottom: 30px;
       }
     }
   </style>
@@ -57,30 +79,37 @@
     <img src="Logo_TulantiRepairs.jpg" alt="Tulanti Repairs Logo">
   </div>
 
-  <!-- Testo centrato sotto il logo -->
-  <div class="intro-text">
-    Clicca le icone per visualizzare i miei social e per prenotare le tue Stampe!
+  <!-- Testo principale sotto il logo -->
+  <div class="main-text">
+    Prenota Ora!
   </div>
 
-  <!-- Icone social -->
-  <div class="social-icons">
-    <!-- WhatsApp -->
-    <a href="https://wa.me/393456145470" target="_blank">
+  <!-- Logo WhatsApp con testo sotto -->
+  <div class="whatsapp-container">
+    <a href="https://wa.me/393456145470" target="_blank" aria-label="WhatsApp">
       <img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="WhatsApp">
     </a>
+    <div class="whatsapp-text">
+      Clicca il tuo social preferito per saperne di più!
+    </div>
+  </div>
+
+  <!-- Altri social -->
+  <div class="social-icons">
     <!-- TikTok -->
-    <a href="https://www.tiktok.com/@tulantirepairs?_t=ZN-8yJPRCJAT8I&_r=1" target="_blank">
+    <a href="https://www.tiktok.com/@tulantirepairs?_t=ZN-8yJPRCJAT8I&_r=1" target="_blank" aria-label="TikTok">
       <img src="https://img.icons8.com/color/96/000000/tiktok--v1.png" alt="TikTok">
     </a>
     <!-- Instagram -->
-    <a href="https://www.instagram.com/tulanti_repairs?igsh=MTZoY2tkMXdqYzZvOQ%3D%3D&utm_source=qr" target="_blank">
+    <a href="https://www.instagram.com/tulanti_repairs?igsh=MTZoY2tkMXdqYzZvOQ%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram">
       <img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram">
     </a>
     <!-- Facebook -->
-    <a href="https://www.facebook.com/share/1EZZDzT9oC/?mibextid=wwXIfr" target="_blank">
+    <a href="https://www.facebook.com/share/1EZZDzT9oC/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
       <img src="https://img.icons8.com/color/96/000000/facebook.png" alt="Facebook">
     </a>
   </div>
 
 </body>
 </html>
+
