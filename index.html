@@ -28,25 +28,33 @@
       color: #002855; /* Blu scuro testo */
     }
 
+    /* Contenitore WhatsApp */
     .whatsapp-container {
       display: inline-block;
       margin-bottom: 20px;
-    }
-
-    .whatsapp-container a {
       border-bottom: 3px solid white;
       padding-bottom: 6px;
-      display: inline-block;
       transition: border-color 0.3s;
     }
 
-    .whatsapp-container a:hover img {
-      transform: scale(1.1);
-      box-shadow: 0 0 8px 3px #00aaff; /* effetto luce azzurro */
+    /* Icona WhatsApp */
+    .whatsapp-container a img {
+      width: 80px;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: transform 0.2s, box-shadow 0.3s;
+      vertical-align: middle;
+      display: inline-block;
     }
 
-    .whatsapp-container a:hover {
-      border-color: #00aaff; /* bordo azzurro al hover */
+    /* Hover WhatsApp - stesso effetto delle altre icone */
+    .whatsapp-container:hover {
+      border-color: #00aaff;
+    }
+
+    .whatsapp-container:hover a img {
+      transform: scale(1.1);
+      box-shadow: 0 0 8px 3px #00aaff;
     }
 
     .whatsapp-text {
@@ -72,24 +80,24 @@
       padding-bottom: 6px;
       display: inline-block;
       transition: border-color 0.3s;
-      margin: 0; /* rimuovo margini per evitare spazi strani */
+      margin: 0;
     }
 
     .social-icons a img {
       width: 80px;
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.3s;
-      border-radius: 12px; /* leggero arrotondamento per stile moderno */
+      border-radius: 12px;
       vertical-align: middle;
+    }
+
+    .social-icons a:hover {
+      border-color: #00aaff;
     }
 
     .social-icons a:hover img {
       transform: scale(1.1);
-      box-shadow: 0 0 8px 3px #00aaff; /* effetto luce azzurro */
-    }
-
-    .social-icons a:hover {
-      border-color: #00aaff; /* bordo azzurro al hover */
+      box-shadow: 0 0 8px 3px #00aaff;
     }
 
     @media (max-width: 500px) {
@@ -97,7 +105,8 @@
         gap: 20px;
       }
 
-      .social-icons a img {
+      .social-icons a img,
+      .whatsapp-container a img {
         width: 60px;
       }
 
