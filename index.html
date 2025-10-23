@@ -94,9 +94,14 @@
     .social-icons a img {
       width: 80px;
       cursor: pointer;
-      border-radius: 12px; /* Applica border-radius per gli angoli smussati */
+      /* border-radius: 12px; rimosso da qui per non influire su tutti i loghi */
       vertical-align: middle;
       transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    /* Stile specifico per il logo di Facebook */
+    .social-icons a[aria-label="Facebook"] img {
+      border-radius: 12px; /* Applica border-radius solo al logo di Facebook */
     }
 
     .social-icons a:hover {
