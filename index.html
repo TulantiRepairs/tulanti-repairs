@@ -94,14 +94,9 @@
     .social-icons a img {
       width: 80px;
       cursor: pointer;
-      /* border-radius: 12px; rimosso da qui per non influire su tutti i loghi */
+      border-radius: 12px; /* Applica border-radius a tutti i loghi social per uniformità */
       vertical-align: middle;
       transition: transform 0.2s, box-shadow 0.3s;
-    }
-
-    /* Stile specifico per il logo di Facebook */
-    .social-icons a[aria-label="Facebook"] img {
-      border-radius: 12px; /* Applica border-radius solo al logo di Facebook */
     }
 
     .social-icons a:hover {
@@ -171,8 +166,7 @@
       </a>
       
       <a href="https://www.facebook.com/tulantirepairs" onclick="window.location='https://www.facebook.com/tulantirepairs';" aria-label="Facebook">
-        <img src="https://img.icons8.com/fluency/96/002855/facebook-new.png" alt="Facebook">
-      </a>
+        <img src="https://img.icons8.com/fluency/96/000000/facebook-new.png" alt="Facebook" style="border-radius: 12px;">       </a>
     </div>
   </div>
 
